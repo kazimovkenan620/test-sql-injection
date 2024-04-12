@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results!</title>
+</head>
+<body>
+    <h1>Search Results!</h1>
+    {% if results %}
+        <ul>
+        {% for result in results %}
+            <li>
+                <strong>Name:</strong> {{ result.first_name }}<br>
+                <strong>Last Name:</strong> {{ result.last_name }}<br>
+                <strong>Brith Date:</strong> {{ result.birth_date }}<br>
+                <strong>Country:</strong>{{result.country}}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found</p>
+    {% endif %}
+</body>
+</html>
